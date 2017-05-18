@@ -1,6 +1,7 @@
 Prerequisites
 ========================
 *Java installation (1.7)
+
 *Apache Maven installation (3.3)
 
 Compiling Code
@@ -10,6 +11,7 @@ Compiling Code
 Input Graph Fromat
 =======================
 * Input graph is provided as an edge list
+
 	* source vertex id,target vertex id,edge weight (optional)
 
 Running Code
