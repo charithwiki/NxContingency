@@ -111,6 +111,8 @@ public class NxContingency {
             for(Integer v: maxBC) {
                 writer.println(v);
             }
+            writer.flush();
+            writer.close();
         }
     }
 
