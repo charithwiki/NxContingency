@@ -15,16 +15,17 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>2.5.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.5</source>
+                    <target>1.5</target>
                 </configuration>
             </plugin>
-            <plugin>
+            
+	    <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>fully.qualified.MainClass</mainClass>
+                            <mainClass>edu.usc.hive.NxContingency</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -33,26 +34,13 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
                 </configuration>
                 <executions>
                     <execution>
-                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
-                        <phase>package</phase> <!-- bind to the packaging phase -->
+                        <id>make-assembly</id> 
+                        <phase>package</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>fully.qualified.MainClass</mainClass>
-                        </manifest>
-                    </archive>
-                    <descriptorRefs>
-                        <descriptorRef>jar-with-dependencies</descriptorRef>
-                    </descriptorRefs>
-                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -68,22 +56,22 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
           <groupId>net.sf.jung</groupId>
           <artifactId>jung-algorithms</artifactId>
           <version>2.0.1</version>
-          <scope>system</scope>
-          <systemPath>${project.basedir}/jung/jung-algorithms-2.0.1.jar</systemPath>
+          <!--scope>system</scope-->
+          <!--systemPath>${project.basedir}/jung/jung-algorithms-2.0.1.jar</systemPath-->
       </dependency>
       <dependency>
           <groupId>net.sf.jung</groupId>
           <artifactId>jung-api</artifactId>
           <version>2.0.1</version>
-          <scope>system</scope>
-          <systemPath>${project.basedir}/jung/jung-api-2.0.1.jar</systemPath>
+          <!--scope>system</scope-->
+          <!--systemPath>${project.basedir}/jung/jung-api-2.0.1.jar</systemPath-->
       </dependency>
       <dependency>
           <groupId>net.sf.jung</groupId>
           <artifactId>jung-graph-impl</artifactId>
           <version>2.0.1</version>
-          <scope>system</scope>
-          <systemPath>${project.basedir}/jung/jung-graph-impl-2.0.1.jar</systemPath>
+          <!--scope>system</scope-->
+          <!--systemPath>${project.basedir}/jung/jung-graph-impl-2.0.1.jar</systemPath-->
       </dependency>
       <dependency>
           <groupId>org.apache.commons</groupId>
@@ -115,4 +103,10 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
           <version>19.0</version>
       </dependency>
   </dependencies>
+  <repositories>
+  <repository>
+    <id>my-local-repo</id>
+    <url>file://${project.basedir}/local-repo</url>
+  </repository>
+</repositories>	
 </project>
