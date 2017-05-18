@@ -4,6 +4,7 @@ Prerequisites
 
 *Apache Maven installation (3.3)
 
+
 Compiling Code
 =======================
 *<code>$mvn clean install</code>
@@ -23,4 +24,7 @@ Running Code
 	* ex: <code>$./bin/run_baseline.sh 14-bus.txt 9</code>
 
 
+OUTPUT
+======================
+* Set of x number of vertices with highest group betweenness centrality (i.e. the set of x number of entities, that has the largest impact if removed concurrently).
 
