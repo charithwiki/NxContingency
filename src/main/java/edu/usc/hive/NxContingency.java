@@ -73,9 +73,17 @@ public class NxContingency {
             line = reader.readLine();
         }
 
+        if(x < 1 || x > vertices.size()) {
+            System.out.println("Invalid input, 0 < x < N (number of vertices)");
+            return;
+        }
+
         long startTime = System.currentTimeMillis();
         ArrayList<Integer> vals = new ArrayList<Integer>();
         vals.addAll(vertices);
+
+
+
         List<HashSet<Integer>> groups = Combination.getCombination(vals, x);
 
         Set<Integer> maxBC = null;
