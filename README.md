@@ -1,6 +1,6 @@
 
-Baseline Algorithm for Nx Contingency
-======================================
+Baseline Algorithm for Nx Contingency Selection
+================================================
 
 Prerequisites
 ==============
