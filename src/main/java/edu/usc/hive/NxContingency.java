@@ -87,7 +87,7 @@ public class NxContingency {
         List<HashSet<Integer>> groups = Combination.getCombination(vals, x);
 
         Set<Integer> maxBC = null;
-        double currentMax = Double.MIN_VALUE;
+        double currentMax = -1*Double.MAX_VALUE;
         SuccessiveGroupBetweenness<Integer, Integer> gb = new SuccessiveGroupBetweenness<Integer, Integer>(g,
                 TransformerUtils.mapTransformer(w), false);
 
